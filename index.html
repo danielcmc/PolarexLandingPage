@@ -4,6 +4,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KPX76B6K');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- EDIT BEFORE LAUNCH:
        1. Update the title/brand if "Buying Window Intelligence" is not the final name.
        2. Add the final website URL and social-preview image.
@@ -22,7 +30,9 @@
   <meta property="og:image" content="https://YOUR-DOMAIN.com/social-preview.jpg" />
   -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 64 64&#39;%3E%3Crect width=&#39;64&#39; height=&#39;64&#39; rx=&#39;14&#39; fill=&#39;%230f3040&#39;/%3E%3Cpath d=&#39;M16 19h32v7H16zm0 13h23v7H16zm0 13h15v7H16z&#39; fill=&#39;%23ffffff&#39;/%3E%3Ccircle cx=&#39;48&#39; cy=&#39;44&#39; r=&#39;8&#39; fill=&#39;%230a7070&#39;/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="Polarex%20Official%20Logo%20Emblem%20(Brand%20Colour).png">
+  <link rel="apple-touch-icon" href="Polarex%20Official%20Logo%20Emblem%20(Brand%20Colour).png">
+  <meta name="msapplication-TileImage" content="Polarex%20Official%20Logo%20Emblem%20(Brand%20Colour).png">
 
   <style>
     :root {
@@ -408,15 +418,13 @@
     }
 
     .founder-avatar {
-      display: grid;
-      place-items: center;
+      display: block;
       width: 78px;
       height: 78px;
       border-radius: 22px;
-      background: var(--ink);
-      color: var(--white);
-      font-size: 25px;
-      font-weight: 900;
+      object-fit: cover;
+      border: 2px solid var(--line);
+      background: var(--white);
     }
 
     .founder-card h3 {
@@ -701,6 +709,11 @@
   </style></head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPX76B6K"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <a class="skip-link" href="https://sdmntprbrazilsouth.oaiusercontent.com/files/00000000-3010-820e-bbc2-fd795f1da805/raw?se=2026-07-26T14:50:41Z&amp;sp=r&amp;sv=2026-02-06&amp;sr=b&amp;scid=d561cc1e-f9b2-40fd-827e-95ca9cb3054e&amp;skoid=33096a49-a96b-4506-9fc4-04a7517f8175&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2026-07-26T10:36:00Z&amp;ske=2026-07-28T10:36:00Z&amp;sks=b&amp;skv=2026-02-06&amp;sig=xZu29aZ9%2BDpJK42lk%2B8ekppykVcy3PnvHyjMxtjBWwY%3D#main">Skip to main content</a>
 
   <div class="wrap">
@@ -761,8 +774,7 @@
           </div>
 
           <p class="source-note">
-            Evidence: three dated public sources · Last verified: illustrative
-            example only
+            Evidence: three dated public sources
           </p>
         </aside>
       </section>
@@ -946,9 +958,9 @@
 
       <section class="section" aria-labelledby="founder-heading">
         <div class="founder-card">
-          <div class="founder-avatar" aria-hidden="true">A</div>
+          <img class="founder-avatar" src="WhatsApp%20Image%202026-07-26%20at%2022.05.53.jpeg" alt="Founder portrait" aria-hidden="false">
           <div>
-            <h3 id="founder-heading">Built by <span data-founder-name="">Avi</span></h3>
+            <h3 id="founder-heading">Built by <span data-founder-name="">Daniel Mc Dougall</span></h3>
             <p>
               Building a focused buying-window intelligence system for MSP and
               cybersecurity sales teams from Trinidad and Tobago, with the
@@ -1025,7 +1037,7 @@
   <script>
     const SITE_CONFIG = {
       productName: "Polarex",
-      founderName: "Daniel",
+      founderName: "Daniel Mc Dougall",
 
       // REQUIRED BEFORE LAUNCH
       contactEmail: "polarexai@gmail.com",
@@ -1074,23 +1086,121 @@
       }
     }
 
+    function getAttributionData() {
+      const params = new URLSearchParams(window.location.search);
+      const utm_source = params.get("utm_source") || "";
+      const utm_medium = params.get("utm_medium") || "";
+      const utm_campaign = params.get("utm_campaign") || "";
+      const utm_content = params.get("utm_content") || "";
+      const utm_term = params.get("utm_term") || "";
+      const referrer = document.referrer || "";
+
+      let referrer_host = "";
+      try {
+        referrer_host = new URL(referrer).hostname.replace(/^www\./, "").toLowerCase();
+      } catch (error) {
+        referrer_host = referrer;
+      }
+
+      let traffic_source = "direct";
+      if (utm_source) {
+        traffic_source = utm_source;
+      } else if (referrer_host.includes("linkedin")) {
+        traffic_source = "linkedin";
+      } else if (referrer_host.includes("slack") || referrer_host.includes("discord") || referrer_host.includes("community")) {
+        traffic_source = "community";
+      } else if (referrer_host) {
+        traffic_source = "referral";
+      }
+
+      return {
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        utm_content,
+        utm_term,
+        referrer,
+        referrer_host,
+        traffic_source
+      };
+    }
+
     function trackEvent(eventName, eventData = {}) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: eventName,
+        page: "polarex_landing_page",
+        page_title: document.title,
+        page_path: window.location.pathname,
+        timestamp: new Date().toISOString(),
+        ...getAttributionData(),
         ...eventData
+      });
+    }
+
+    function trackCtaClick(element) {
+      if (!element) return;
+      trackEvent("cta_clicked", {
+        cta_name: element.dataset.analyticsEvent || element.textContent.trim(),
+        cta_text: element.textContent.trim(),
+        cta_href: element.href || ""
+      });
+    }
+
+    function trackFormStarted() {
+      trackEvent("form_started", {
+        form_type: "tally"
+      });
+      trackEvent("pilot_discussion_started", {
+        form_type: "tally"
+      });
+    }
+
+    let formSubmitted = false;
+    function trackFormSubmitted() {
+      if (formSubmitted) return;
+      formSubmitted = true;
+      trackEvent("form_submitted", {
+        form_type: "tally"
+      });
+      trackEvent("qualified_prospect", {
+        form_type: "tally"
       });
     }
 
     document.querySelectorAll("[data-analytics-event]").forEach((element) => {
       if (element.tagName.toLowerCase() === "button") return;
       element.addEventListener("click", () => {
-        trackEvent(element.dataset.analyticsEvent);
+        trackCtaClick(element);
       });
+    });
+
+    const formPanel = document.querySelector(".form-panel");
+    if (formPanel) {
+      formPanel.addEventListener("click", trackFormStarted);
+      formPanel.addEventListener("focusin", trackFormStarted);
+    }
+
+    const tallyIframe = document.querySelector(".tally-embed");
+    if (tallyIframe) {
+      tallyIframe.addEventListener("load", () => {
+        trackEvent("form_loaded", {
+          form_type: "tally"
+        });
+      });
+    }
+
+    window.addEventListener("message", (event) => {
+      if (!event.data) return;
+      const message = typeof event.data === "string" ? event.data.toLowerCase() : JSON.stringify(event.data).toLowerCase();
+      if (message.includes("submitted") || message.includes("tally:submit") || message.includes("submit")) {
+        trackFormSubmitted();
+      }
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
     applyConfig();
+    trackEvent("page_view", {});
   </script>
   <script src="https://tally.so/widgets/embed.js" async defer></script>
 
