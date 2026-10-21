@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // GitHub Pages serves this project under its repository name.
-  base: '/PolarexLandingPage/',
+  // The custom domain serves this site at its root, without a repository prefix.
+  base: '/',
 });

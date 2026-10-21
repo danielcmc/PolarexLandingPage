@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite (normally http://localhost:5173/PolarexLandingPage/).
+Open the local URL printed by Vite (normally http://localhost:5173/).
 
 ```sh
 npm run check   # JavaScript syntax validation
@@ -21,15 +21,17 @@ npm run preview # Serve the production build locally
 
 ## Deploy to GitHub Pages
 
-1. In [the repository's Pages settings](https://github.com/danielcmc/PolarexLandingPage/settings/pages), under **Build and deployment → Source**, select **GitHub Actions**. For GitHub Free, the repository must be public; private-repository Pages requires an eligible GitHub plan.
+1. In [the repository's Pages settings](https://github.com/danielcmc/PolarexLandingPage/settings/pages), under **Build and deployment → Source**, select **GitHub Actions**. Keep **Custom domain** set to `getpolarex.com`. For GitHub Free, the repository must be public; private-repository Pages requires an eligible GitHub plan.
 2. Commit and push these changes to `main`, including `.github/workflows/deploy.yml`, `vite.config.js`, and `package-lock.json`. The workflow installs dependencies, checks JavaScript, builds the site, and deploys only `dist/`.
-3. Follow **Actions → Deploy to GitHub Pages**. After the workflow succeeds, the site will be available at **https://danielcmc.github.io/PolarexLandingPage/**. Future pushes to `main` redeploy automatically. You can also select **Run workflow** in the Actions tab.
+3. Follow **Actions → Deploy to GitHub Pages**. After the workflow succeeds, the site will be available at **https://getpolarex.com/**. Future pushes to `main` redeploy automatically. You can also select **Run workflow** in the Actions tab.
 
 The workflow uses GitHub's built-in deployment token; no custom secrets, `gh-pages` branch, or committed build files are required. See [GitHub's Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [Vite's GitHub Pages guide](https://vite.dev/guide/static-deploy.html#github-pages).
 
-`vite.config.js` sets the `/PolarexLandingPage/` base path so styles, JavaScript, and images load correctly under the repository URL. After building, preview this same path at http://localhost:4173/PolarexLandingPage/.
+`vite.config.js` sets `base: '/'` because the custom domain serves the site at its root. Styles, JavaScript, and images load from `/assets/`. After building, preview at http://localhost:4173/.
 
-If you rename the repository, update `base` in `vite.config.js` and the canonical, `og:url`, `og:image`, and `twitter:image` URLs in `index.html`. For a custom domain, set `base` to `/`, update those URLs to your domain, and configure the domain in GitHub Pages settings.
+The canonical and social-sharing URLs in `index.html` point to `getpolarex.com`. If you change the custom domain, update those URLs and the Pages setting. Custom GitHub Actions deployments do not require a `CNAME` file; GitHub stores the custom domain in the repository's Pages settings. See [GitHub's custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+If you switch back to the default repository URL, set `base` to `/PolarexLandingPage/` and update the canonical and social-sharing URLs. Keeping that repository prefix on a custom domain makes asset requests fail and leaves the page unstyled.
 
 ## Editing
 
