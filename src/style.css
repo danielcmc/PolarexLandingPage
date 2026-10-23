@@ -166,16 +166,17 @@ h3 { font-weight: 500; }
 .form-fallback a > span[aria-hidden] { margin-left: 3px; }
 .noscript-note { font-size: 12px; margin-top: 10px; }
 
-.site-footer { border-top: 1px solid var(--rule); min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-footer { border-top: 1px solid var(--rule); display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 24px 48px; padding-block: 32px; }
 .footer-brand .brand-mark { width: 18px; }
 .footer-brand .brand-wordmark { width: 86px; }
 .footer-brand { gap: 8px; }
-.footer-details { min-width: 0; text-align: center; padding-block: 16px; }
-.site-footer p { font-family: var(--serif); font-size: 16px; color: var(--muted); }
-.site-footer .footer-contact { font-family: var(--sans); font-size: 12px; margin-top: 8px; }
-.footer-contact a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.footer-identity { min-width: 0; }
+.footer-tagline { font-family: var(--serif); font-size: 16px; color: var(--muted); margin-top: 12px; }
+.footer-contact { min-width: 0; border-left: 1px solid var(--rule); padding-left: 32px; }
+.footer-contact-label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.footer-contact a { display: inline-block; padding-block: 4px; font-size: 12px; color: var(--blue); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .footer-contact a:hover { text-decoration-thickness: 2px; }
-.site-footer small { font-size: 10px; color: var(--muted); }
+.site-footer small { grid-column: 1 / -1; font-size: 10px; color: var(--muted); }
 
 @media (min-width: 1440px) {
   .hero { column-gap: 130px; }
@@ -298,10 +299,8 @@ h3 { font-weight: 500; }
   .application-fit { margin-top: 26px; padding-top: 19px; }
   .application-form-heading h3 { font-size: 14px; }
   .form-fallback { font-size: 10px; }
-  .site-footer { min-height: 107px; flex-wrap: wrap; gap: 14px 20px; padding-block: 25px; }
-  .footer-tagline { display: none; }
-  .footer-details { order: 1; flex-basis: 100%; text-align: left; padding-block: 0; }
-  .site-footer .footer-contact { margin-top: 0; }
+  .site-footer { grid-template-columns: 1fr; padding-block: 25px; }
+  .footer-contact { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
