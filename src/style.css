@@ -154,6 +154,9 @@ h3 { font-weight: 500; }
 .application-fit .eyebrow { color: var(--blue); font-size: 9px; }
 .application-fit > p:last-child { color: var(--muted); font-size: 13px; margin-top: 10px; }
 .application-next { font-size: 12px; margin-top: 26px; color: var(--muted); max-width: 320px; }
+.application-contact { font-size: 12px; margin-top: 12px; color: var(--muted); max-width: 320px; }
+.application-contact a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.application-contact a:hover { text-decoration-thickness: 2px; }
 .application-form { border-top: 2px solid var(--blue); padding-top: 20px; min-width: 0; }
 .application-form-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
 .application-form-heading h3 { font-size: 15px; font-weight: 500; }
