@@ -39,9 +39,14 @@ If you switch back to the default repository URL, set `base` to `/PolarexLanding
 - **Layout, colors, typography, and responsive rules:** `src/style.css`.
 - **Form loading status and copyright year:** `src/main.js`.
 - **Brand assets:** `public/assets/`. The logo crops preserve the supplied branding; the original logo and report screenshots remain in the project root as references.
+- **Favicons:** `public/assets/favicon.png` (192×192) and `public/favicon.ico` (16, 32, 48, and 64px). Both use the supplied Polarex symbol.
 - **Hosting path and deployment:** `vite.config.js` and `.github/workflows/deploy.yml`.
 
 The report is clearly labeled as an illustrative example, adapted from the supplied screenshots. It does not claim actual customers, buying intent, or outcomes.
+
+## Google search icon
+
+The homepage declares both favicon formats. Keep their URLs stable and publicly accessible. After deployment, you can request indexing of `https://getpolarex.com/` using Google Search Console's URL Inspection tool. Google may take several days to several weeks to recrawl and process the favicon; its appearance is not guaranteed. See [Google's favicon documentation](https://developers.google.com/search/docs/appearance/favicon-in-search).
 
 ## Tally application
 
