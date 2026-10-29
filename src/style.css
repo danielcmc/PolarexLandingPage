@@ -127,13 +127,10 @@ h3, h4 { font-weight: 500; }
 .observation-list { list-style: none; padding: 0; margin: 15px 0 0; }
 .observation-list li { color: var(--muted); font-size: 14px; line-height: 1.75; }
 .observation-list li + li { margin-top: 12px; }
-.source-reference { color: var(--blue); font-family: var(--mono); font-size: 11px; display: inline-block; padding: 2px; text-decoration: underline; text-underline-offset: 3px; }
-.evidence-note { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 16px; padding-top: 13px; border-top: 1px solid #eceef0; }
 .brief-interpretation { padding: 18px 19px; border-left: 2px solid var(--blue); background: #f4f7fc; margin-bottom: 23px; }
 .brief-interpretation h4 { color: var(--blue); }
 .brief-interpretation .finding-marker { background: var(--blue); }
 .brief-interpretation p { margin-top: 9px; font-size: 14px; line-height: 1.75; }
-.brief-interpretation a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 .brief-details { border-top: 1px solid var(--rule); }
 .brief-details summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 50px; padding-block: 13px; list-style: none; cursor: pointer; color: var(--ink); font-size: 13px; font-weight: 500; line-height: 1.5; }
 .brief-details summary::-webkit-details-marker { display: none; }
@@ -147,14 +144,6 @@ h3, h4 { font-weight: 500; }
 .alternative-list li { padding-left: 4px; }
 .alternative-list li + li { margin-top: 10px; }
 .alternative-list strong { color: var(--ink); font-weight: 500; }
-.source-list { margin: 0 0 21px; padding-left: 20px; font-size: 13px; line-height: 1.6; color: var(--muted); }
-.source-list li { padding-left: 3px; margin-top: 12px; }
-.source-list a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
-.source-list li > span { display: block; margin-top: 3px; font-size: 11px; }
-.document-action { padding-block: 9px 15px; border-top: 1px solid var(--rule); }
-.document-action .text-link { width: 100%; flex-wrap: wrap; column-gap: 12px; row-gap: 3px; border: 0; font-size: 13px; }
-.document-action small { font-size: 11px; color: var(--muted); font-weight: 400; }
-.document-action .text-link > span[aria-hidden] { margin-left: auto; }
 
 .brief-assessment { padding-top: 19px; border-top: 2px solid var(--blue); }
 .brief-assessment > .eyebrow { color: var(--blue); }
@@ -170,7 +159,55 @@ h3, h4 { font-weight: 500; }
 .assessment-block .assessment-caveat { font-size: 12px; line-height: 1.65; }
 .assessment-block ul { padding-left: 17px; margin-bottom: 0; }
 .assessment-block li + li { margin-top: 6px; }
-.research-disclaimer { max-width: 760px; margin-top: 23px; font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+/* Fictional account brief: keep the summary scannable and the full reasoning inspectable. */
+.account-context { margin: 0; padding-block: 15px; border-top: 1px solid var(--rule); }
+.account-context > div { display: grid; grid-template-columns: 85px minmax(0, 1fr); gap: 10px; }
+.account-context > div + div { margin-top: 10px; }
+.account-context dt { font-family: var(--mono); font-size: 9px; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.account-context dd { margin: 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.opportunity-summary { padding-block: 21px 23px; border-top: 1px solid var(--rule); }
+.account-brief .opportunity-headline { display: block; font-family: var(--serif); font-size: 27px; font-weight: 400; letter-spacing: -.025em; line-height: 1.3; }
+.opportunity-summary > p { margin-top: 12px; font-size: 14px; line-height: 1.75; color: var(--muted); }
+.evidence-label { font-family: var(--mono); font-size: 10px; color: var(--blue); }
+.signal-highlights .signal-source { display: flex; flex-wrap: wrap; align-items: baseline; gap: 5px 10px; margin-bottom: 5px; font-family: var(--mono); font-size: 10px; color: var(--muted); line-height: 1.6; }
+.signal-highlights li + li { margin-top: 16px; padding-top: 14px; border-top: 1px solid #eceef0; }
+.signal-highlights strong, .brief-interpretation strong { font-weight: 500; color: var(--ink); }
+.brief-detail-content { padding-bottom: 22px; }
+.detail-intro { font-size: 12px; line-height: 1.7; color: var(--muted); margin-top: 10px; }
+.evidence-record { margin-top: 19px; padding-top: 19px; border-top: 1px solid var(--rule); }
+.account-context + .detail-section-heading { margin-top: 21px; }
+.evidence-meta { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline; gap: 5px 14px; }
+.evidence-meta time { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.evidence-source-type { font-size: 11px; line-height: 1.65; color: var(--muted); margin-top: 7px; }
+.evidence-record h5 { margin: 7px 0 0; font-size: 14px; font-weight: 500; line-height: 1.6; }
+.evidence-analysis { margin: 0; }
+.evidence-analysis > div { margin-top: 13px; }
+.evidence-analysis dt { font-size: 11px; font-weight: 500; }
+.evidence-analysis dd { margin: 4px 0 0; font-size: 13px; line-height: 1.75; color: var(--muted); }
+.evidence-analysis > div:nth-child(2) dt { color: var(--blue); }
+.evidence-analysis > div:last-child { border-left: 1px solid #cdd9eb; padding-left: 12px; }
+.confidence-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; line-height: 1.65; }
+.confidence-table caption { text-align: left; font-size: 12px; color: var(--muted); padding-bottom: 14px; }
+.confidence-table th, .confidence-table td { text-align: left; vertical-align: top; padding: 10px 10px 10px 0; border-bottom: 1px solid var(--rule); overflow-wrap: break-word; }
+.confidence-table th { font-weight: 500; }
+.confidence-table thead th:first-child { width: 60%; }
+.confidence-table td { color: var(--blue); }
+.stakeholder-list { margin: 11px 0 0; }
+.stakeholder-list > div + div { margin-top: 15px; }
+.stakeholder-list dt { font-size: 13px; font-weight: 500; }
+.stakeholder-list dd { margin: 4px 0 0; font-size: 13px; line-height: 1.7; color: var(--muted); }
+.qualification-list { padding-left: 18px; margin: 11px 0 0; font-size: 14px; line-height: 1.75; color: var(--muted); }
+.qualification-list li + li { margin-top: 12px; }
+.sales-play > p, .evaluation-list { font-size: 13px; line-height: 1.75; color: var(--muted); margin-top: 12px; }
+.evaluation-list { padding-left: 18px; margin-bottom: 16px; }
+.evaluation-list li + li { margin-top: 5px; }
+.sales-play .sales-play-questions { margin-top: 20px; }
+.outreach-example { margin-top: 20px; padding: 17px; border-left: 2px solid var(--blue); background: #f4f7fc; }
+.outreach-example .eyebrow { font-size: 9px; color: var(--blue); }
+.outreach-example blockquote p { margin-top: 12px; font-size: 14px; line-height: 1.75; }
+
+.research-disclaimer { max-width: 760px; margin: 0 0 20px; font-size: 12px; color: var(--muted); line-height: 1.65; }
 .account-request { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px 48px; margin-top: 43px; padding-top: 29px; border-top: 1px solid var(--rule); }
 .account-request h3 { font-family: var(--serif); font-size: 25px; line-height: 1.3; letter-spacing: -.02em; }
 .account-request > div:first-child p { color: var(--muted); font-size: 14px; max-width: 580px; margin-top: 9px; }
@@ -377,13 +414,17 @@ h3, h4 { font-weight: 500; }
   .brief-observations { padding-block: 22px; }
   .account-brief h4 { font-size: 12px; gap: 8px; }
   .observation-list li { font-size: 14px; line-height: 1.7; }
-  .evidence-note { font-size: 12px; }
   .brief-interpretation { padding: 16px 14px; margin-bottom: 20px; }
   .brief-interpretation p { font-size: 14px; line-height: 1.7; overflow-wrap: break-word; }
   .brief-details summary { font-size: 13px; padding-block: 15px; gap: 12px; min-height: 50px; }
-  .alternative-list, .source-list { font-size: 13px; }
-  .document-action .text-link { font-size: 12px; gap: 7px 12px; }
-  .document-action small { font-size: 10px; }
+  .alternative-list { font-size: 13px; }
+  .account-context > div { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .account-context dt { padding-top: 0; }
+  .account-brief .opportunity-headline { font-size: 25px; }
+  .evidence-meta { gap: 5px 10px; }
+  .evidence-record h5 { font-size: 13px; }
+  .confidence-table { font-size: 12px; }
+  .outreach-example { padding: 14px; }
   .brief-assessment { display: block; padding-top: 18px; }
   .brief-assessment > h3 { font-size: 27px; }
   .brief-assessment > .assessment-block, .brief-assessment > .assessment-block:first-of-type, .brief-assessment > .assessment-block:last-child { margin-top: 23px; padding-top: 0; border-top: 0; }
@@ -391,7 +432,7 @@ h3, h4 { font-weight: 500; }
   .confidence-list > div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 18px; }
   .confidence-list dd { margin: 0; }
   .assessment-block p, .assessment-block ul { font-size: 14px; }
-  .research-disclaimer { margin-top: 21px; font-size: 11px; }
+  .research-disclaimer { font-size: 11px; }
   .account-request { margin-top: 27px; padding-top: 24px; gap: 11px; }
   .account-request h3 { font-size: 24px; }
   .account-request > div:first-child p { font-size: 14px; }

@@ -41,11 +41,15 @@ If you switch back to the default repository URL, set `base` to `/PolarexLanding
 - **Brand assets:** `public/assets/`. The logo crops preserve the supplied branding; the original logo and report screenshots remain in the project root as references.
 - **Favicons:** `public/assets/favicon.png` (192×192) and `public/favicon.ico` (16, 32, 48, and 64px). Both use the supplied Polarex symbol.
 - **Hosting path and deployment:** `vite.config.js` and `.github/workflows/deploy.yml`.
-- **Full account brief:** `public/briefs/Polarex_Jack_Henry_Account_Opportunity_Brief.pdf`. It is copied unchanged from the supplied three-page PDF; the original remains in the project root.
+- **Fictional account brief:** the `#research` section in `index.html`, including all five simulated evidence records and expandable analysis.
 
 ## Research example and conversion paths
 
-The page previews the real Jack Henry & Associates investigation dated 29 October 2026, from a hypothetical Grafana Cloud seller perspective. Observations, commercial interpretation, alternatives, confidence, and unresolved questions remain distinct. Original public sources are linked, and visitors can open the full PDF. The example implies no customer relationship, endorsement, or contact with either company. Update both the preview and PDF together when refreshing the research; preserve source dates and limitations.
+The Nexora Commerce example is fully fictional and dated 29 October 2026. Its account events, documents, evidence, and findings are invented. It illustrates a commercial assessment for a hypothetical OpenTelemetry-native observability vendor specializing in tracing, telemetry cost controls, and enterprise debugging. It is not an actual investigation or a customer story.
+
+Five condensed signals are visible immediately. Native expandable sections contain the account context, complete chronological evidence records, competing explanations, eight confidence dimensions, recommended sales play, qualification questions, and example outreach. One visible disclaimer above the brief establishes that the companies, events, and evidence are illustrative; individual records use natural source types and finding labels without repeating the disclaimer. Each record includes a document title, date, finding, interpretation, and limitation. Sources are named consistently in the highlights, reasoning, and expanded records (for example, “checkout incident review”), without coded references such as E01. Technical implementation details stay in the expanded records so the summary explains the sales opportunity directly. Do not add realistic-looking external source URLs or present the scenario's confidence levels as real-world verification.
+
+The old Jack Henry PDF is retained only at the project root as a reference. Its deployed copy and download link have been removed; the fictional brief is presented directly in HTML.
 
 Visitors can explore the brief, email Daniel to discuss an account investigation, or apply for a design partnership. The investigation link opens a prefilled `mailto:daniel@getpolarex.com` message asking for the visitor's product, website, target account, and commercial question. This is an email inquiry, not a second form, a guaranteed research delivery, or a free-service offer. No additional form service or backend needs configuration.
 
