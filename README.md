@@ -41,8 +41,15 @@ If you switch back to the default repository URL, set `base` to `/PolarexLanding
 - **Brand assets:** `public/assets/`. The logo crops preserve the supplied branding; the original logo and report screenshots remain in the project root as references.
 - **Favicons:** `public/assets/favicon.png` (192×192) and `public/favicon.ico` (16, 32, 48, and 64px). Both use the supplied Polarex symbol.
 - **Hosting path and deployment:** `vite.config.js` and `.github/workflows/deploy.yml`.
+- **Full account brief:** `public/briefs/Polarex_Jack_Henry_Account_Opportunity_Brief.pdf`. It is copied unchanged from the supplied three-page PDF; the original remains in the project root.
 
-The report is clearly labeled as an illustrative example, adapted from the supplied screenshots. It does not claim actual customers, buying intent, or outcomes.
+## Research example and conversion paths
+
+The page previews the real Jack Henry & Associates investigation dated 29 October 2026, from a hypothetical Grafana Cloud seller perspective. Observations, commercial interpretation, alternatives, confidence, and unresolved questions remain distinct. Original public sources are linked, and visitors can open the full PDF. The example implies no customer relationship, endorsement, or contact with either company. Update both the preview and PDF together when refreshing the research; preserve source dates and limitations.
+
+Visitors can explore the brief, email Daniel to discuss an account investigation, or apply for a design partnership. The investigation link opens a prefilled `mailto:daniel@getpolarex.com` message asking for the visitor's product, website, target account, and commercial question. This is an email inquiry, not a second form, a guaranteed research delivery, or a free-service offer. No additional form service or backend needs configuration.
+
+The design partnership is an initial 28-day collaboration with weekly findings and a continuation decision during week four. An optional 30-day paid pilot requires mutual agreement on scope. Founding-partner pricing is subject to agreed terms; no fixed discount is advertised.
 
 ## Google search icon
 
@@ -53,5 +60,9 @@ The homepage declares both favicon formats. Keep their URLs stable and publicly 
 The page embeds the existing `MelXaX` form with the requested parameters and [Tally's official embed script](https://tally.so/help/embed-your-form). Tally controls the form fields, submissions, event forwarding, and automatic iframe resizing. The initial iframe height provides a fallback; CSS does not override the height set by Tally.
 
 The iframe has a direct source so it can start loading independently of the embed script, and the page provides an always-visible link to open the application separately. Form updates made in Tally appear in the existing embed. No form submission data is handled or stored by this project.
+
+The current form is a **design-partner application**, not an account-investigation request. Its generic product/market placeholder examples can optionally be refreshed in Tally to match the observability focus; the existing application remains functional without that change. Keep the iframe's `src` and the official script; do not also add `data-tally-src` to this iframe, since Tally's initialization selectors treat those modes separately.
+
+The existing GA4 tag `G-ND8NXMQZYY`, favicon declarations, custom-domain metadata, and GitHub Pages workflow are retained. Browser QA should block analytics requests to avoid sending test visits to the live property.
 
 For release QA, check the page at narrow and wide viewport sizes, follow the application links with a keyboard, and confirm that the live Tally form resizes when fields or pages change. Use test data for a submission only when authorized; deployment itself does not require a test submission.
